@@ -1,4 +1,3 @@
-# ==============================================================================
 # AUTHOR: Rolando H Ramirez Jr
 # DATE: June 7, 2026
 # DESCRIPTION: Core Runtime Integration Layer - MOTHERLAND NEXUS 4.0 MATRIX
