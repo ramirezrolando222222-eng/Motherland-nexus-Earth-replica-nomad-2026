@@ -1,0 +1,53 @@
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --danger:#ef4444;
+  --radius:10px;
+  --shadow: 0 6px 18px rgba(32,33,36,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.app{
+  width:100%;
+  max-width:720px;
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+h1{margin:0 0 12px 0;font-size:1.5rem}
+#todo-form{display:flex;gap:8px;margin-bottom:12px}
+#todo-input{
+  flex:1;padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;font-size:1rem;background:#fff;
+}
+#add-btn{
+  padding:10px 14px;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;
+}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.filters button{background:transparent;border:none;padding:6px 8px;border-radius:6px;cursor:pointer;color:var(--muted)}
+.filters .active{background:#eef2ff;color:var(--accent)}
+#todo-list{list-style:none;padding:0;margin:0}
+.todo-item{
+  display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;border:1px solid #f1f3f5;margin-bottom:8px;
+}
+.todo-item.completed .content{ text-decoration:line-through;color:#9aa0a6 }
+.todo-item .content{flex:1}
+.todo-item button.icon{background:transparent;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:6px}
+.todo-item input[type="text"]{flex:1;padding:8px;border-radius:6px;border:1px solid #e6e9ef}
+.status{margin-top:12px;color:var(--muted);font-size:0.95rem;display:flex;justify-content:flex-end}
+#clear-completed{background:transparent;border:1px solid #eee;padding:6px 8px;border-radius:6px;cursor:pointer;color:var(--danger)}
+@media (max-width:480px){
+  .app{padding:16px}
+  #todo-input{font-size:.95rem}
+}
